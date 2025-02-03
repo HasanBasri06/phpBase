@@ -1,0 +1,17 @@
+html 
+    head 
+        title Dashboard
+        link(rel="stylesheet", href="/public/css/app.css")
+    body 
+        div(class="loginForm")
+            h1(class="text-4xl font-bold text-center text-blue-500") Hesabım Sayfası
+            h2(class="text-center font-semibold text-2xl mt-4") #{auth.name}
+            h2(class="text-center font-normal text-lg mt-4") #{auth.email}
+            h2(class="text-center font-semibold mt-4") Kayıt Tarihi: 
+                span(class="font-normal") #{auth.created_at}
+            div(class="text-center mt-4")  
+                a(href="/users/password/change") 
+                    button(class="text-blue-800 font-semibold text-lg") Şifre Değiştir
+            div(class="text-center mt-8")  
+                a(href="/logout") 
+                    button(class="text-red-500 font-semibold text-lg") Çıkış Yap

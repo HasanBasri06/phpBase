@@ -1,0 +1,26 @@
+html 
+    head 
+        title Kayıt Ol
+        link(rel="stylesheet", href="/public/css/app.css")
+    body 
+        form(action="users/register", method="POST")            
+            div(class="loginForm") 
+                - if (error)
+                    div(class="alert-danger mb-4")
+                        p= error
+                h1(class="text-center text-2xl font-semibold") Kayıt Ol
+                input(type="hidden" name="csrf_token" value=csrf)
+                div(class="flex flex-col mt-4") 
+                    label İsim
+                    input(type="text" name="name" class="mt-4 font-semibold" placeholder="İsim giriniz." required)
+                div(class="flex flex-col mt-4") 
+                    label Email
+                    input(type="email" name="email" class="mt-4 font-semibold" placeholder="Email giriniz." required)
+                div(class="flex flex-col mt-4")
+                    label Şifre
+                    input(type="password" name="password" class="mt-4 font-semibold" placeholder="Şifre giriniz." required)
+                div(class="flex flex-col mt-4")
+                    label Şifre Tekrar
+                    input(type="password" name="password_confirm" class="mt-4 font-semibold" placeholder="Şifre onayı giriniz." required)
+                button(class="button mt-4") Kayıt Ol
+                a(class="button-register mt-4" href="/login") Giriş Yap
