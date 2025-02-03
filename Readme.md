@@ -14,6 +14,13 @@ Proje PHP ile oluşturulmuş bir MVC (Model, View, Controller) tabanlı bir sist
 
 ``router/web.php`` sayfasında $router değişkeninden rota oluşturulmaktadır. Ve bu 3 farklı şekilde oluşturulabilir.
 
-<?php 
+'<?php 
 
-    router->get()
+use App\Http\Controllers\HomeController;
+
+'router->get("/", fn() => "Anasayfa")
+$router->get("/", function() {
+    return "Anasayfa";
+})
+$router->get("/", [HomeController::index, 'index']);
+'
