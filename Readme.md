@@ -8,7 +8,7 @@ Proje PHP ile oluşturulmuş bir MVC (Model, View, Controller) tabanlı bir sist
 
 ## Çalıştırma
 
-```php -S localhost:8000``` ile projeyi başlatabilirsiniz. eğer 8000 portu başka bir yerde çalıştırılıyor ise değiştirebilirsiniz. örn; 8001
+```php -S localhost:8000 index.php``` ile projeyi başlatabilirsiniz. eğer 8000 portu başka bir yerde çalıştırılıyor ise değiştirebilirsiniz. örn; 8001
 
 ## Router 
 
